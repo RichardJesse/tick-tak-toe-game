@@ -14,7 +14,8 @@ const startGame = () => {
 }
 
 function boxClicked(e) {
-    const id = e.target.id
+    const id = e.target.id;
+    console.log(id);
 
     if(!spaces[id]){
         spaces[id] = currentPlayer
