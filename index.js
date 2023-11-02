@@ -44,7 +44,7 @@ io.on('connection', (socket) => {
     });
 
     /**
-       * Notify the players about the victor.
+       * Notify the players about the winner.
        */
     socket.on('gameEnded', (data) => {
         socket.broadcast.to(data.room).emit('gameEnd', data);

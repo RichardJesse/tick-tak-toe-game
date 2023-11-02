@@ -4,7 +4,7 @@
     let player;
     let game;
   
-    // const socket = io.connect('http://tic-tac-toe-realtime.herokuapp.com'),
+    
     const socket = io.connect('http://localhost:5000');
   
     class Player {
@@ -124,29 +124,7 @@
           room: this.getRoomId(),
         });
       }
-      /**
-       *
-       * To determine a win condition, each square is "tagged" from left
-       * to right, top to bottom, with successive powers of 2.  Each cell
-       * thus represents an individual bit in a 9-bit string, and a
-       * player's squares at any given time can be represented as a
-       * unique 9-bit value. A winner can thus be easily determined by
-       * checking whether the player's current 9 bits have covered any
-       * of the eight "three-in-a-row" combinations.
-       *
-       *     273                 84
-       *        \               /
-       *          1 |   2 |   4  = 7
-       *       -----+-----+-----
-       *          8 |  16 |  32  = 56
-       *       -----+-----+-----
-       *         64 | 128 | 256  = 448
-       *       =================
-       *         73   146   292
-       *
-       *  We have these numbers in the Player.wins array and for the current
-       *  player, we've stored this information in playsArr.
-       */
+      
       checkWinner() {
         const currentPlayerPositions = player.getPlaysArr();
   
