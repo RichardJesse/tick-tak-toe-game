@@ -24,8 +24,10 @@ function boxClicked(e) {
         if(playerHasWon() !==false){
             playerText.innerHTML = `${currentPlayer} has won!`
             let winning_blocks = playerHasWon()
-
+            
             winning_blocks.map( box => boxes[box].style.backgroundColor=winnerIndicator)
+            // disable the boxes once a winning combo has been found
+            boxes.forEach(box => box.removeEventListener('click', boxClicked));
             return
         }
 
@@ -47,7 +49,7 @@ const winningCombos = [
 function playerHasWon() {
     for (const condition of winningCombos) {
         let [a, b, c] = condition
-
+        
         if(spaces[a] && (spaces[a] == spaces[b] && spaces[a] == spaces[c])) {
             return [a,b,c]
         }
@@ -63,6 +65,8 @@ function restart() {
     boxes.forEach( box => {
         box.innerText = ''
         box.style.backgroundColor=''
+        // re-enable the boxes when the game is restarted
+        box.addEventListener('click', boxClicked)
     })
 
     playerText.innerHTML = 'Tic Tac Toe'
