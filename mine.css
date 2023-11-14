@@ -1,0 +1,231 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Finger Paint', cursive;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 150vh;
+    background-image: url(tictac2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  
+}
+.Tic{
+    font-size: 2em;
+    color: #fff;
+    user-select: none;
+}
+.navigation a{
+    position: relative;
+    font-size: 1.2em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+.navigation a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 500ms;
+}
+.navigation a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+
+}
+.navigation .btn{
+    width: 125px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: 400ms;
+}
+.btn:hover{
+    background-color: #fff;
+    color: #333;
+    transform: translateY(-2px);
+}
+.logs{
+    position: relative;
+    width: 480px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid darkslategray;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transform: scale(0);
+    transition: transform 500ms ease, height 300ms ease;
+}
+.logs.active-popup{
+    transform: scale(1);
+}
+.logs.active{
+    height: 520px;
+}
+.logs .form-box{
+    width: 100%;
+    padding: 40px;
+}
+.logs .form-box.login{
+    transition: transform 180ms ease;
+    transform: translateX(0);
+}
+.logs.active .form-box.login{
+    transition: none;
+    transform: translateX(-440px);
+}
+.logs .form-box.register{
+    position: absolute;
+    transition: none;
+    transform: translateX(440px);
+}
+.logs.active .form-box.register{
+    transition: transform 180ms ease;
+    transform: translateX(0);
+}
+
+.logs .ic i{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 40px;
+    background: teal;
+    font-size: 2em;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 15px;
+    cursor: pointer;
+    z-index: 1;
+}
+.login h2{
+    text-align: center;
+    margin-bottom: 17%;
+    color: darkslategray;
+    font-size: 2em;
+}
+.register h2{
+    text-align: center;
+    margin-bottom: 10%;
+    color: darkslategray;
+    font-size: 2em;
+}
+.inputbox{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid teal;
+    margin: 30px 0;
+}
+.inputbox label{
+    position: absolute;
+    top: 5%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: rgb(43, 19, 1);
+    font-weight: 600;
+    pointer-events: none;
+}
+.inputbox input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    font-weight: 600;
+    color:darkgoldenrod ;
+    padding: 0 23px 0 4px;
+}
+i{
+    position: absolute;
+    right: 1px;
+    bottom: 25px;
+    font-size: 1.2em;
+    color:rgb(43, 19, 1) ;
+}
+.remember{
+    color: rgb(43, 19, 1);
+    font-size: 0.9em;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+}
+.remember label input{
+    accent-color: teal;
+    margin-right: 5px;
+}
+.remember a{
+    margin-left: 50px;
+    text-decoration: none;
+    color: rgb(43, 19, 1);   
+}
+.remember a:hover{
+    text-decoration: underline;
+}
+.butn{
+    width: 100%;
+    margin-top: 10px;
+    height: 46px;
+    background: teal;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1em;
+}
+.register{
+    font-size: 1em;
+    color: #fff;
+    text-align: center;
+    font-weight: 550;
+    margin: 25px 0 10px;
+}
+.register  a{
+    text-decoration: none;
+    font-weight: 650;
+    color: #333;
+}
+.register p a:hover{
+    text-decoration: underline;
+}
