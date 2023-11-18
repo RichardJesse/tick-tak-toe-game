@@ -26,7 +26,7 @@
          <h2>Login</h2>
 
 
-        <form action="">
+        <form action="" method="post">
             <div class="inputbox">
             <i class="fa-solid fa-envelope fa-lg" ></i>
             <input type="email" name="email">
@@ -54,7 +54,7 @@
         <h2>Registration</h2>
 
 
-       <form action="">
+       <form action="" method="post">
         <div class="inputbox">
             <i class="fa-solid fa-user"></i>
             <input type="text" name="username" required>
