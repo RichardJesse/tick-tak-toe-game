@@ -13,7 +13,21 @@ body {
     color: var(--orange);
     font-family: 'Finger Paint', cursive;
     background-color: #2d414b;
+    position: relative;
+    isolation: isolate;
 }
+body::after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background-image: url(tictac2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    opacity: 0.5;
+   }
 
 h1 {
     font-size: 54px;
@@ -22,12 +36,17 @@ h1 {
 
 .container {
     padding: 40px;
+    top: 50px;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    background: transparent;
     flex-direction: column;
-    background-color: #37505C;
+    backdrop-filter: blur(17px);
+    border: 2px solid darkslategray;
+    border-radius: 15px;
+    font-weight: 700;
 }
 
 #gamingBoxes {
