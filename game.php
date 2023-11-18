@@ -1,3 +1,8 @@
+<?php
+  session_start();
+  
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -26,7 +31,8 @@
 					<li>Click on join game. </li>
 				</ol>
 				<h4>Create a new Game</h4>
-				<input type="text" name="name" id="nameNew" placeholder="Enter your name" required>
+				<input type="text" name="name" id="nameNew" placeholder="Enter your name" required<?php
+				$email ?> >
 				<button id="new">New Game</button>
 				<br><br>
 				<h4>Join an existing game</h4>

@@ -8,7 +8,6 @@
     <link rel='stylesheet' type='text/css' media='screen' href='mine.css'>
     <link href="https://fonts.googleapis.com/css2?family=Finger+Paint&family=Roboto:wght@300&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/91ef6306c9.js" crossorigin="anonymous"></script>
-    <link rel="icon" href="tickicon.png">
 
 </head>
 <body>
@@ -75,7 +74,7 @@
        <div class="remember">
            <label><input type="checkbox">I agree to the terms & conditions</label>
        </div>
-       <button type="submit" class="butn">Register</button>
+       <button type="submit" class="butn">Login</button>
        <div class="register">
        <p>Already have an account?<a href="#" class="login-link">Login</a></p>
       </div>
