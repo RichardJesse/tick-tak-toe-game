@@ -1,3 +1,43 @@
+<?php
+//    include 'signUpPhp.php';
+include 'connect.php';
+include 'signUp.php';
+include 'login.php';
+// if($_SERVER['REQUEST_METHOD'] == 'POST'){
+//     if(isset($_POST['signup'])){
+//         $email = $_POST['email'];
+//         $password = $_POST['password'];
+        
+//        $query1 = "INSERT INTO Players (email , password) VALUES ('$email', '$password')";
+//        $status = mysqli_query($connect,$query1);
+//        if($status){
+//            echo 'you were added successfully';
+//        }
+//        else{
+//            echo 'its not you its us';
+//        }
+//    }
+//    if(isset($_POST['login'])){
+//     $email = $_POST['email'];
+//     $password = $_POST['password'];
+    
+//      $query2 = "SELECT * FROM Players WHERE email = '$email' AND  password = '$password'";
+//     $result = mysqli_query($connect,$query2);
+//     if(mysqli_num_rows($result) > 0){
+//         echo 'you are in the database';
+//     }
+//     else{
+//         echo 'you are wasting my time';
+//     }
+// }
+// }
+
+if (isset($_SESSION['message'])) {
+    echo $_SESSION['message'];
+    unset($_SESSION['message']);
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -42,7 +82,7 @@
             <label><input type="checkbox">Remember me</label>
         <a href="#">Forgot password?</a>
         </div>
-        <button type="submit" class="butn">Login</button>
+        <button type="submit" class="butn" name="login">Login</button>
         <div class="register">
         <p>Don't have an account?<a href="#" class="register-link">Register</a></p>
        </div>
@@ -74,7 +114,7 @@
        <div class="remember">
            <label><input type="checkbox">I agree to the terms & conditions</label>
        </div>
-       <button type="submit" class="butn">Login</button>
+       <button type="submit" class="butn" name="signup">Sign Up</button>
        <div class="register">
        <p>Already have an account?<a href="#" class="login-link">Login</a></p>
       </div>
