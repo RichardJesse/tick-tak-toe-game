@@ -12,7 +12,7 @@
 </head>
 <body>
     <header>
-        <h2 class="Tic">Tic-Tac-Toe</h2>
+        <h2 class="Tic">Tick-Tac-Toe</h2>
          <nav class="navigation">
             <a href="#">About</a>
             <a href="#">Sign up</a>

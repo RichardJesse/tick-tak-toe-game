@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Tic Tac Toe</title>
+		<title>Tick-Tac-Toe</title>
 		<link rel="stylesheet" href="main.css">
         <link rel="stylesheet" href="gameStyles.css">
 		<link rel="stylesheet" href="node_modules/skeleton-css/css/skeleton.css">
@@ -23,7 +23,7 @@
 		
 		<div class="container">
 			<div class="menu">
-				<h1>Tic - Tac - Toe</h1>
+				<h1>Tick - Tac - Toe</h1>
 				<h3>How To Play</h3>
 				<ol>
 					<li>Player 1 Create a new game by entering the username</li>
