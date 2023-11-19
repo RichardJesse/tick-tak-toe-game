@@ -1,3 +1,9 @@
+<?php
+include 'connect.php';
+include 'login.php';
+include 'signUp.php';
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,7 +32,7 @@
          <h2>Login</h2>
 
 
-        <form action="">
+        <form action="" method="post">
             <div class="inputbox">
             <i class="fa-solid fa-envelope fa-lg" ></i>
             <input type="email" name="email">
@@ -42,7 +48,7 @@
             <label><input type="checkbox">Remember me</label>
         <a href="#">Forgot password?</a>
         </div>
-        <button type="submit" class="butn">Login</button>
+        <button type="submit" class="butn" name="login">Login</button>
         <div class="register">
         <p>Don't have an account?<a href="#" class="register-link">Register</a></p>
        </div>
@@ -54,7 +60,7 @@
         <h2>Registration</h2>
 
 
-       <form action="">
+       <form action="" method="post">
         <div class="inputbox">
             <i class="fa-solid fa-user"></i>
             <input type="text" name="username" required>
@@ -74,7 +80,7 @@
        <div class="remember">
            <label><input type="checkbox">I agree to the terms & conditions</label>
        </div>
-       <button type="submit" class="butn">Login</button>
+       <button type="submit" class="butn" name="signup">Sign up</button>
        <div class="register">
        <p>Already have an account?<a href="#" class="login-link">Login</a></p>
       </div>
