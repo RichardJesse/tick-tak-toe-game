@@ -1,5 +1,6 @@
 <?php
   session_start();
+  $email = isset($_SESSION['email']) ? $_SESSION['email'] : '';
   
 ?>
 
@@ -30,8 +31,7 @@
 					<li>Click on join game. </li>
 				</ol>
 				<h4>Create a new Game</h4>
-				<input type="text" name="name" id="nameNew" placeholder="Enter your name" required<?php
-				$email ?> >
+				<input type="text" name="name" id="nameNew" placeholder="Enter your name" required value="<?php echo htmlspecialchars($email); ?>">
 				<button id="new">New Game</button>
 				<br><br>
 				<h4>Join an existing game</h4>
