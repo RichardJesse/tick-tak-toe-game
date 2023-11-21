@@ -2,7 +2,9 @@
 This is a simple tic-tac-toe game that brings joy to the hearts of its players
 ------------------------------------------------------------------------------------------------------------------
 **Want To Try Out This game?**
-Steps.
+
+**Steps**
+
 1.Clone this repository
 
 2.Open the terminal and run this command
