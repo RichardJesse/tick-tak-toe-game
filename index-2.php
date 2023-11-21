@@ -1,3 +1,13 @@
+<?php
+session_start();
+$_SESSION['email'] = $email; 
+
+if(!isset($_SESSION['email'])){
+    header('location:index.php');
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -53,7 +63,7 @@
         <h1>best tick tac toe game</h1>
 
         <button class="restartBtn">
-            <a href="oneGame.html">Play Alone</a></button>
+            <a href="oneGame.html">Play against AI</a></button>
         <button class="restartBtn"><a href="game.php">Play with a Friend </a></button>
     </div>
     
